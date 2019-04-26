@@ -741,7 +741,7 @@ class Stock:
             print(' =', marketCap)
             marketCap = marketCap / 1000000
             print(
-                'Dividing marketCap by 1 million (to work with linear regression module):', marketCap)
+                'Dividing marketCap by 1 million:', marketCap)
             return marketCap
 
         elif Stock.indicator == 'Turnover':
@@ -1579,7 +1579,8 @@ def indicatorMain(listOfStocks):
     for i in range(0, len(Stock.indicatorCorrelation), 1):
         formula = ''.join(
             ('f(x) = ', str(round(float(Stock.indicatorRegression[i][0]), 2)), 'x + ', str(round(float(Stock.indicatorRegression[i][1]), 2))))
-        print('Linear regression equation for ' + Stock.indicator.lower() + ' and ' +
+        print('
+              equation for ' + Stock.indicator.lower() + ' and ' +
               listOfReturnStrings[i].lower() + ': ' + formula)
 
 
